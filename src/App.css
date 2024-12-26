@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+/* src/fonts.css */
+@font-face {
+  font-family: 'BiloxiThin';
+  src: url('./Fonts/BiloxiThin.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BiloxiScript';
+  src: url('./Fonts/BiloxiScript.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans-light';
+  src: url('./Fonts/GillSans-Light.otf') format('otf');
+  font-style: normal;
+}
+.Title{
+   font-family: 'BiloxiScript';
+   font-size: 142px;
+   line-height: 142px;
+   display: flex;
+   justify-content: center;
+   font-weight: 400;
+   margin-top: 4%;
+   margin-bottom: 2%;
+}
+.sub{
+   font-family:'GillSans-light';
+   text-transform: uppercase;
+   font-weight: 300;
+   font-size: 30px;
+   line-height: 30px;
+   margin-top: 0;
+   display:flex;
+   justify-content:center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  justify-items: center; 
+  gap: 50px; 
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image {
+  width: 280px; 
+  height: 280px; 
+  object-fit: cover; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
