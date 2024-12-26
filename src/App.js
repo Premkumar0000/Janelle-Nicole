@@ -19,12 +19,12 @@ import Layout from './Pages/Layout';
 
 function App() {
   const images = [
-    { src: image1, alt: 'Resume', path: '/resume' },
-    { src: image2, alt: 'Portfolio', path: '/portfolio' },
-    { src: image3, alt: 'About', path: '/about' },
-    { src: image4, alt: 'Book', path: '/book' },
-    { src: image5, alt: 'Trailer', path: '/trailer' },
-    { src: image6, alt: 'Gentleman', path: '/gentleman' },
+    { src: image1, alt: 'Resume', path: '/resume', title: 'Resume' },
+    { src: image2, alt: 'Portfolio', path: '/portfolio', title: 'Portifoliyo' },
+    { src: image3, alt: 'About', path: '/about', title: 'About' },
+    { src: image4, alt: 'Book', path: '/book', title: 'Book' },
+    { src: image5, alt: 'Trailer', path: '/trailer', title: 'Trailer' },
+    { src: image6, alt: 'Gentleman', path: '/gentleman', title: 'Gentleman' },
   ];
 
   return (
@@ -36,13 +36,14 @@ function App() {
             element={
               <Layout>
                 <div className="image-gallery">
-  {images.map((image, index) => (
-    <Link to={image.path} key={index} className="image-container">
-      <img src={image.src} alt={image.alt} className="image" />
-      <div className="overlay"></div> 
-    </Link>
-  ))}
-</div>
+                  {images.map((image, index) => (
+                    <Link to={image.path} key={index} className="image-container">
+                      <img src={image.src} alt={image.alt} className="image" />
+                      <div className="overlay"></div>
+                      <div className="image-title">{image.title}</div> {/* Title added here */}
+                    </Link>
+                  ))}
+                </div>
               </Layout>
             } 
           />

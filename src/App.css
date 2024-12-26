@@ -14,7 +14,7 @@
   src: url('./Fonts/GillSans-Light.otf') format('otf');
   font-style: normal;
 }
-.Title{
+.Title {
    font-family: 'BiloxiScript';
    font-size: 142px;
    line-height: 142px;
@@ -24,17 +24,16 @@
    margin-top: 4%;
    margin-bottom: 2%;
 }
-.sub{
-   font-family:'GillSans-light';
+.sub {
+   font-family: 'GillSans-light';
    text-transform: uppercase;
    font-weight: 300;
    font-size: 30px;
    line-height: 30px;
    margin-top: 0;
-   display:flex;
-   justify-content:center;
+   display: flex;
+   justify-content: center;
 }
-
 .image-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
@@ -43,19 +42,29 @@
   padding-left: 25%;
   padding-right: 25%;
 }
-
 .image {
   width: 280px; 
   height: 280px; 
   object-fit: cover; 
 }
-
 .image-container {
   position: relative; 
   display: inline-block; 
-  overflow: hidden; /* Ensure the overlay doesn't overflow the container */
+  overflow: hidden;
 }
-
+.image-title {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: #000000; 
+  font-size: 1.5rem; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
+  z-index: 10; 
+  opacity: 0; 
+  transition:  0.3s ease; 
+  font-family: 'BiloxiScript';
+}
 .overlay {
   position: absolute; 
   top: 50%; 
@@ -67,8 +76,10 @@
   transform: translate(-50%, -50%) scale(0); 
   transition: opacity 0.3s ease, transform 0.3s ease; 
 }
-
 .image-container:hover .overlay {
   opacity: 1; 
   transform: translate(-50%, -50%) scale(1); 
+}
+.image-container:hover .image-title {
+  opacity: 10; 
 }
