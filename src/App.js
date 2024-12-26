@@ -1,5 +1,6 @@
 // src/App.js
 import './App.css';
+import './index.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import image1 from './assests/Resume.jpg'; 
 import image2 from './assests/img2.jpg'; 
@@ -35,12 +36,13 @@ function App() {
             element={
               <Layout>
                 <div className="image-gallery">
-                  {images.map((image, index) => (
-                    <Link to={image.path} key={index}>
-                      <img src={image.src} alt={image.alt} className="image" />
-                    </Link>
-                  ))}
-                </div>
+  {images.map((image, index) => (
+    <Link to={image.path} key={index} className="image-container">
+      <img src={image.src} alt={image.alt} className="image" />
+      <div className="overlay"></div> 
+    </Link>
+  ))}
+</div>
               </Layout>
             } 
           />

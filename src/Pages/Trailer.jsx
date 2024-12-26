@@ -1,6 +1,4 @@
-// src/components/Resume.js
 import React from 'react';
-
 const Trailer = () => {
   return (
     <div>
