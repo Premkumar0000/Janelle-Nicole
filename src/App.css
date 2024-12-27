@@ -125,7 +125,7 @@
 }
 
 .portfolio-item:hover .image-overlay {
-  opacity: 1; /* Show overlay on hover */
+  opacity: 1; 
 }
 
 .overlay-label {
@@ -136,9 +136,42 @@
 }
 
 
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  position: relative;
+}
 
-/* .ninth-image{
-  position: absolute;
-  height: auto;
-  width: 30%;
-} */
+.carousel img {
+  max-width: 935px;
+  float: right;
+}
+
+button {
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.button-con{
+  position: relative;
+  margin-top: -100%;
+}
